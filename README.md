@@ -1,6 +1,6 @@
 # DHL myAPI
-[![Build Status](https://travis-ci.org/pavolbiely/bazos-crawler.svg?branch=master)](https://travis-ci.org/pavolbiely/bazos-crawler)
-[![Coverage Status](https://coveralls.io/repos/github/pavolbiely/bazos-crawler/badge.svg?branch=master)](https://coveralls.io/github/pavolbiely/bazos-crawler?branch=master)
+[![Build Status](https://travis-ci.org/pavolbiely/dhlmyapi.svg?branch=master)](https://travis-ci.org/pavolbiely/dhlmyapi)
+[![Coverage Status](https://coveralls.io/repos/github/pavolbiely/dhlmyapi/badge.svg?branch=master)](https://coveralls.io/github/pavolbiely/dhlmyapi?branch=master)
 
 Please ask DHL for username, password and Customer ID in order to access their API.
 
