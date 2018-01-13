@@ -1,0 +1,22 @@
+{
+  "name": "pavolbiely/dhlmyapi",
+  "description": "DHL myAPI",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pavol Biely",
+      "email": "pavolbiely@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "nette/tester": "1.7.x"
+  },
+  "autoload": {
+    "psr-4": {
+      "DhlMyApi\\": "src"
+    }
+  }
+}
