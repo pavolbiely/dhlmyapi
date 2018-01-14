@@ -201,7 +201,7 @@ class Dhl
 	 * @param string
 	 * @return \stdClass|NULL
 	 */
-	public function createPackages(array $packages, string $customerUniqueImportId = NULL): ?\stdClass
+	public function createPackages(array $packages, string $customerUniqueImportId = NULL)
 	{
 		try {
 			if (count($packages) == 0) {
