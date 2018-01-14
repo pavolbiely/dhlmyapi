@@ -12,6 +12,8 @@ $recipient = new Address('Test Tester 2', 'Testovacia 2', '831 05', 'Bratislava'
 $payment = new Payment('DE89370400440532013000', 'TATRSKBX', '1201800001', 1.99, Payment::CURRENCY_EUR,  1000.0,  Payment::CURRENCY_EUR,  '0308');
 
 $package = new Package(25183385203, Package::TYPE_SK_COD, Package::DEPO_HQ_BRATISLAVA, $recipient, $sender, $payment, [Package::FLAG_SAT], 'TEST');
+$package->setPosition(2);
+$package->setCount(3);
 
 Assert::same(25183385203, $package->getNumber());
 Assert::same(102, $package->getType());
@@ -21,6 +23,8 @@ Assert::same('Test Tester 2', $package->getRecipient()->getName());
 Assert::same('DE89370400440532013000', $package->getPayment()->getIban());
 Assert::same(['SAT'], $package->getFlags());
 Assert::same('TEST', $package->getNote());
+Assert::same(2, $package->getPosition());
+Assert::same(3, $package->getCount());
 
 Assert::exception(function () use ($package) {
 	$package->setType(999);

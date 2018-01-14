@@ -4,11 +4,12 @@
 
 Please ask DHL for username, password and Customer ID in order to access their API.
 
-## Usage
+## Installation
 
 Use composer to install this package.
 
 ### Example of usage
+Create a package and order a courier.
 ```php
 $dhl = new Dhl('user', 'pass', 1234, __DIR__ . '/temp');
 $payment = new Payment('SK4123000000000002045678', 'POBNSKBA', '123456', 100.0);
@@ -19,6 +20,12 @@ $dhl->createPackages([$package]);
 $dhl->createPickupOrders([new PickupOrder('TEST','TEST', 1, $recipient, 'info@example.org', NULL, NULL, NULL, 'TEST')])
 ```
 
+Generating PDF labels
+```php
+header('Content-Type: application/pdf');
+echo PdfLabel::generateLabels($packages, PdfLabel::QUARTER);
+```
+
 ## How to run tests?
 Tests are build with [Nette Tester](https://tester.nette.org/). You can run it like this:
 ```bash
@@ -27,6 +34,9 @@ php -f tester ./ -c php.ini-mac --coverage coverage.html --coverage-src ../src
 
 ## Minimum requirements
 - PHP 7.1+
+
+## Credits
+This code is based and inspired by [salamek/ppl-my-api](https://github.com/Salamek/PplMyApi).
 
 ## License
 MIT License (c) Pavol Biely

@@ -28,6 +28,12 @@ class Package
 	/* @var string */
 	protected $note;
 
+	/** @var int */
+	protected $count = 1;
+
+	/** @var int */
+	protected $position = 1;
+
 	const DEPOS = [50,51,52,53,54,58,59];
 
 	const DEPO_HQ_BRATISLAVA = 50; // HQ Bratislava
@@ -279,10 +285,51 @@ class Package
 
 
 	/**
-	 * @return string
 	 */
 	public function getNote(): ?string
 	{
 		return $this->note;
+	}
+
+
+
+	/**
+	 * @param int
+	 * @return self
+	 */
+	public function setCount(int $count): Package
+	{
+		$this->count = $count;
+		return $this;
+	}
+
+
+
+	/**
+	 */
+	public function getCount(): int
+	{
+		return $this->count;
+	}
+
+
+
+	/**
+	 * @param int
+	 * @return self
+	 */
+	public function setPosition(int $position): Package
+	{
+		$this->position = $position;
+		return $this;
+	}
+
+
+
+	/**
+	 */
+	public function getPosition(): int
+	{
+		return $this->position;
 	}
 }

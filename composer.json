@@ -12,7 +12,8 @@
   ],
   "require": {
     "php": ">=7.1",
-    "nette/tester": "2.0.x"
+    "nette/tester": "2.0.x",
+    "tecnickcom/tcpdf": "^6.2"
   },
   "autoload": {
     "psr-4": {
