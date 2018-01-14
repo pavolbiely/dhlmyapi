@@ -59,7 +59,7 @@ class Payment
 	 * @param string
 	 * @param string
 	 */
-	public function __construct(string $iban, string $swift, string $codVarSymbol, float $codPrice, string $codCurrency = self::CURRENCY_EUR, float $insurPrice = 0.0, string $insurCurrency = self::CURRENCY_EUR, string $specSymbol = NULL)
+	public function __construct(string $iban = NULL, string $swift = NULL, string $codVarSymbol, float $codPrice, string $codCurrency = self::CURRENCY_EUR, float $insurPrice = 0.0, string $insurCurrency = self::CURRENCY_EUR, string $specSymbol = NULL)
 	{
 		$this->setIban($iban);
 		$this->setSwift($swift);
@@ -78,7 +78,7 @@ class Payment
 	 * @return self
 	 * @todo IBAN regex validator
 	 */
-	public function setIban(string $value): Payment
+	public function setIban(string $value = NULL): Payment
 	{
 		$this->iban = preg_replace('~([^a-zA-Z0-9]+)~', '', $value);
 		return $this;
@@ -87,9 +87,9 @@ class Payment
 
 
 	/**
-	 * @return string
+	 * @return string|NULL
 	 */
-	public function getIban(): string
+	public function getIban(): ?string
 	{
 		return $this->iban;
 	}
@@ -101,7 +101,7 @@ class Payment
 	 * @return self
 	 * @todo SWIFT validator
 	 */
-	public function setSwift(string $value): Payment
+	public function setSwift(string $value = NULL): Payment
 	{
 		$this->swift = $value;
 		return $this;
@@ -110,9 +110,9 @@ class Payment
 
 
 	/**
-	 * @return string
+	 * @return string|NULL
 	 */
-	public function getSwift(): string
+	public function getSwift(): ?string
 	{
 		return $this->swift;
 	}
