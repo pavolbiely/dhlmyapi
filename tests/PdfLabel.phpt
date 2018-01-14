@@ -8,6 +8,8 @@ use Tester\Assert,
 
 require __DIR__ . '/bootstrap.php';
 
+ini_set('memory_limit', '-1');
+
 $sender = new Address('Test Tester', 'Testovacia 1', '831 04', 'Bratislava', Address::COUNTRY_SK);
 $recipient = new Address('Test Tester 2', 'Testovacia 2', '831 05', 'Bratislava', Address::COUNTRY_SK);
 $payment = new Payment('DE89370400440532013000', 'TATRSKBX', '1201800001', 1.99, Payment::CURRENCY_EUR,  1000.0,  Payment::CURRENCY_EUR,  '0308');
