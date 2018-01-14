@@ -1,6 +1,7 @@
 # DHL myAPI
 [![Build Status](https://travis-ci.org/pavolbiely/dhlmyapi.svg?branch=master)](https://travis-ci.org/pavolbiely/dhlmyapi)
 [![Coverage Status](https://coveralls.io/repos/github/pavolbiely/dhlmyapi/badge.svg?branch=master)](https://coveralls.io/github/pavolbiely/dhlmyapi?branch=master)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BHZKXCWAK2NNS)
 
 Please ask DHL for username, password and Customer ID in order to access their API.
 
