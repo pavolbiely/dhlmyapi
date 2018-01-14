@@ -317,6 +317,30 @@ class Dhl
 
 		return isset($result->GetPackagesResult->ResultData->MyApiPackageOut) ? $result->GetPackagesResult->ResultData->MyApiPackageOut : [];
 	}
+
+
+
+	/**
+	 * @param string
+	 * @param string
+	 * @return object|NULL
+	 * @throws \Exception
+	 */
+	public function getParcelShops(string $code = NULL, string $countryCode = Address::COUNTRY_SK)
+	{
+		if ($countryCode && !in_array($countryCode, Address::COUNTRIES)) {
+			throw new \Exception("Country '" . $countryCode . "' not found");
+		}
+
+		$result = $this->soap->GetParcelShops([
+			'Filter' => [
+				'Code' => $code,
+				'CountryCode' => $countryCode,
+			]
+		]);
+
+		return $result->GetParcelShopsResult->ResultData->MyApiParcelShop ?? NULL;
+	}
 }
 
 
