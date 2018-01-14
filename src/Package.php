@@ -229,9 +229,9 @@ class Package
 
 
 	/**
-	 * @return \DhlMyApi\Payment
+	 * @return \DhlMyApi\Payment|NULL
 	 */
-	public function getPayment(): Payment
+	public function getPayment(): ?Payment
 	{
 		return $this->payment;
 	}
