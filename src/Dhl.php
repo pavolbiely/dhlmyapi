@@ -39,10 +39,9 @@ class Dhl
 		$this->customerId = $customerId;
 
 		if ($tempDir === NULL) {
-			$this->tempDir = sys_get_temp_dir();
-		} else {
-			$this->tempDir = rtrim($tempDir, '/');
+			$tempDir = sys_get_temp_dir();
 		}
+		$this->tempDir = rtrim($tempDir, '/');
 
 		try {
 			$this->soap = new \SoapClient('https://myapi.dhlparcel.sk/MyAPI.svc?wsdl', [
