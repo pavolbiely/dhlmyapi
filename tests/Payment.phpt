@@ -10,9 +10,9 @@ $payment = new Payment('DE89 3704 0044 0532 0130 00', 'TATRSKBX', '1201800001', 
 Assert::same('DE89370400440532013000', $payment->getIban());
 Assert::same('TATRSKBX', $payment->getSwift());
 Assert::same('1201800001', $payment->getCodVarSymbol());
-Assert::same(1.99, $payment->getCodPrice());
+Assert::same('1.99', $payment->getCodPrice());
 Assert::same('EUR', $payment->getCodCurrency());
-Assert::same(1000.0, $payment->getInsurPrice());
+Assert::same('1000.0', $payment->getInsurPrice());
 Assert::same('EUR', $payment->getInsurCurrency());
 Assert::same('0308', $payment->getSpecSymbol());
 
