@@ -168,7 +168,7 @@ class Payment
 	 */
 	public function getCodPrice(): string
 	{
-		return number_format($this->codPrice, 4, '.', '');
+		return number_format($this->codPrice, 2, '.', '');
 	}
 
 
@@ -221,7 +221,7 @@ class Payment
 	 */
 	public function getInsurPrice(): string
 	{
-		return number_format($this->insurPrice, 4, '.', '');
+		return number_format($this->insurPrice, 2, '.', '');
 	}
 
 
