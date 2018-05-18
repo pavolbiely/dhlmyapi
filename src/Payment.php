@@ -164,11 +164,11 @@ class Payment
 
 
 	/**
-	 * @return float
+	 * @return string
 	 */
-	public function getCodPrice(): float
+	public function getCodPrice(): string
 	{
-		return $this->codPrice;
+		return number_format($this->codPrice, 4, '.', '');
 	}
 
 
@@ -217,11 +217,11 @@ class Payment
 
 
 	/**
-	 * @return float
+	 * @return string
 	 */
-	public function getInsurPrice(): float
+	public function getInsurPrice(): string
 	{
-		return $this->insurPrice;
+		return number_format($this->insurPrice, 4, '.', '');
 	}
 
 
