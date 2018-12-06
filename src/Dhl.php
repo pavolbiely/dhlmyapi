@@ -183,7 +183,7 @@ class Dhl
 					'AuthToken' => $this->getAuthToken(),
 				],
 				'Orders' => [
-					'myApiPickUpOrderIn' => $myApiPickUpOrderIn,
+					'MyApiPickupOrderIn' => $myApiPickUpOrderIn,
 				],
 			];
 			return $this->soap->CreatePickupOrders($data);
