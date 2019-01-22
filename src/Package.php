@@ -73,7 +73,7 @@ class Package
 	 * @param array
 	 * @param string
 	 */
-	public function __construct(int $number, $type, $depo, Address $recipient, Address $sender = NULL, Payment $payment = NULL, array $flags = [], string $note = NULL)
+	public function __construct($number, $type, $depo, Address $recipient, Address $sender = NULL, Payment $payment = NULL, array $flags = [], string $note = NULL)
 	{
 		$this->setNumber($number);
 		$this->setType($type);
@@ -91,7 +91,7 @@ class Package
 	 * @param int
 	 * @return \DhlMyApi\Package
 	 */
-	public function setNumber(int $number): Package
+	public function setNumber($number): Package
 	{
 		$this->number = $number;
 		return $this;
@@ -102,7 +102,7 @@ class Package
 	/**
 	 * @return int
 	 */
-	public function getNumber(): int
+	public function getNumber()
 	{
 		return $this->number;
 	}
