@@ -44,8 +44,8 @@ class Package
 	const DEPO_HUB_BRATISLAVA = 59; // HUB Bratislava
 	const DEPO_HUB_ZILINA = 58; // HUB Žilina
 
-	const TYPES = [101,102,103,104,105,106,107,108,109,110];
-	const TYPES_COD = [102,104,106,108,110];
+	const TYPES = [1,2,13,14,36,37,101,102,103,104,105,106,107,108,109,110];
+	const TYPES_COD = [2,14,37,102,104,106,108,110];
 
 	const TYPE_SK = 101; // DHL Parcel Slovensko
 	const TYPE_SK_COD = 102; // DHL Parcel Slovensko - dobierka
@@ -57,6 +57,13 @@ class Package
 	const TYPE_FORYOU_INTERNATIONAL_COD = 108; // DHL Parcel For You International - dobierka
 	const TYPE_IMPORT = 109; // DHL Parcel Import
 	const TYPE_IMPORT_COD = 110; // DHL Parcel Import - dobierka
+
+	const TYPE_PPL_CZ_BUSINESS = 1; // PPL CZ Business
+	const TYPE_PPL_CZ_BUSINESS_COD = 2; // PPL CZ Business – dobierka
+	const TYPE_PPL_CZ_PRIVATE = 13; // PPL CZ Private
+	const TYPE_PPL_CZ_PRIVATE_COD = 14; // PPL CZ Private – dobierka
+	const TYPE_PPL_CONNECT = 36; // PPL Connect
+	const TYPE_PPL_CONNECT_COD = 37; // PPL  Connect – dobierka
 
 	const FLAG_SAT = 'SAT';
 	const FLAGS = [self::FLAG_SAT];
@@ -141,7 +148,7 @@ class Package
 	 */
 	public function isCashOnDelivery(): bool
 	{
-		return in_array($this->type, [self::TYPE_SK_COD, self::TYPE_INTERNATIOANL_COD, self::TYPE_FORYOU_SK_COD, self::TYPE_FORYOU_INTERNATIONAL_COD, self::TYPE_IMPORT_COD]);
+		return in_array($this->type, [self::TYPE_SK_COD, self::TYPE_INTERNATIOANL_COD, self::TYPE_FORYOU_SK_COD, self::TYPE_FORYOU_INTERNATIONAL_COD, self::TYPE_IMPORT_COD, self::TYPE_PPL_CZ_BUSINESS_COD, self::TYPE_PPL_CZ_PRIVATE_COD, self::TYPE_PPL_CONNECT_COD]);
 	}
 
 
